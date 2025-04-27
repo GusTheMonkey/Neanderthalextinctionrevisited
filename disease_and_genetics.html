@@ -3,112 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <title>Neanderthal Extinction: Disease & Genetics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Raleway', sans-serif;
-      background: url('genes.jpg') no-repeat center top fixed;
-      background-size: 110%;
-      color: #ffffff;
+    /* Reset and basics */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: url('genes.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
+      min-height: 100vh;
+      position: relative;
+      line-height: 1.6;
     }
 
     body::before {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0);
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
       z-index: -1;
     }
 
     header {
-      font-family: 'Courier New', monospace;
       text-align: center;
-      padding: 2rem 1rem 0.5rem 1rem;
-      font-size: 3rem;
-      border-bottom: 1px solid white;
+      padding: 2rem 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border-bottom: 1px solid #444;
+      letter-spacing: 1px;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(0, 0, 0, 0.5);
+      gap: 2rem;
+      background-color: rgba(20, 20, 20, 0.85);
       padding: 1rem;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #444;
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #f0f0f0;
       text-decoration: none;
-      font-family: 'Courier New', monospace;
-      font-weight: bold;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #cfcfcf;
     }
 
     main {
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 3rem auto;
       padding: 2rem;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0);
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
     }
 
-    h2, h3 {
-      font-family: 'Courier New', monospace;
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.25rem;
+      font-weight: 700;
     }
 
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     section h3 {
-      font-size: 2rem;
-      border-bottom: 2px solid white;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #666;
     }
 
     section p {
       text-align: left;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 1rem;
     }
 
     .quote {
       font-style: italic;
-      color: #bdbdbd;
+      color: #bbb;
       margin: 1rem 0;
-    }
-
-    .explore-btn {
-      background-color: white;
-      color: black;
-      border: none;
-      padding: 1rem 2rem;
-      margin-top: 2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      font-family: 'Courier New', monospace;
-    }
-
-    .explore-btn:hover {
-      background-color: #ddd;
     }
 
     .visuals img {
       width: 100%;
+      border-radius: 8px;
       margin-top: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .caption {
-      font-size: 1rem;
-      color: #ccc;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
       margin-top: 0.5rem;
       font-style: italic;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      padding: 0.75rem 2rem;
+      margin: 2rem auto 0;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .explore-btn:hover {
+      background-color: #dddddd;
+      transform: translateY(-2px);
     }
 
   </style>
@@ -130,8 +155,8 @@
 
     <section>
       <h3>Genetic Weaknesses</h3>
-      <p>One of the major reasons for Neanderthal extinction was their small, isolated populations. This made them more susceptible to genetic issues due to <strong>inbreeding</strong> and <strong>genetic homogeneity</strong>.</p>
-      <p>Studies have shown that Neanderthals had harmful mutations in genes like <strong>UNC13D</strong> and <strong>MOGS</strong>, linked to severe immune deficiencies. These genetic flaws weakened their ability to resist infections, making them particularly vulnerable to disease outbreaks.</p>
+      <p>One major factor was their small, isolated populations, making them highly susceptible to <strong>inbreeding</strong> and <strong>genetic homogeneity</strong>.</p>
+      <p>Research shows that Neanderthals carried harmful mutations like <strong>UNC13D</strong> and <strong>MOGS</strong>, linked to severe immune deficiencies—leaving them vulnerable to infections.</p>
       <div class="visuals">
         <img src="disease.jpg" alt="Neanderthal Genetic Mutations">
         <div class="caption">Neanderthal genomes show harmful mutations that contributed to their extinction.</div>
@@ -140,25 +165,22 @@
 
     <section>
       <h3>The Allee Effect</h3>
-      <p>Neanderthals faced another challenge—the <strong>Allee effect</strong>. Small, fragmented populations struggle to find mates and maintain genetic diversity, making them more prone to extinction. This demographic vulnerability likely contributed to their decline long before Homo sapiens arrived.</p>
-      <p>As their population dwindled, Neanderthals were unable to recover, even without competition from modern humans. This population instability was worsened by the gradual decline in fertility among younger females, further pushing them toward collapse.</p>
+      <p>The <strong>Allee effect</strong>—where small populations struggle with survival—further weakened Neanderthals. Difficulty finding mates and declining fertility rates amplified their decline before Homo sapiens' arrival.</p>
       <div class="visuals">
         <img src="allee.jpg" alt="Allee Effect in Neanderthals">
-        <div class="caption">Vaesen, K. simulates how Allee effects and other demographic variables impact chances of Neanderthal survival.</div>
+        <div class="caption">Vaesen, K. simulates how Allee effects and other demographic variables impacted Neanderthal survival.</div>
       </div>
     </section>
 
     <section>
       <h3>Vulnerability to Disease</h3>
-      <p>On top of their genetic issues, Neanderthals also had low genetic diversity, which made them highly susceptible to new diseases. When diseases spread, their small populations lacked the genetic diversity needed to survive outbreaks, further contributing to their eventual extinction.</p>
-      <p>Research by Zhou et al. (2022) reveals that Neanderthals were likely ill-equipped to resist infections, which would have decimated their already fragile populations.</p>
+      <p>Low genetic diversity also meant they were defenseless against new diseases. Zhou et al. (2022) suggest that even minor infections could have devastated entire communities.</p>
       <div class="visuals">
         <img src="neanderthal_disease.jpg" alt="Neanderthal Immune System">
-        <div class="caption">The weak immune systems of Neanderthals made them vulnerable to new diseases introduced by Homo sapiens.</div>
+        <div class="caption">Neanderthal immune systems struggled against new diseases introduced by Homo sapiens.</div>
       </div>
     </section>
 
-    
     <button class="explore-btn" onclick="location.href='index.html'">Back To Home</button>
   </main>
 </body>
